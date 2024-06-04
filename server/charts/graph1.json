@@ -1,0 +1,8 @@
+{
+  "name": "Network Alert Graph",
+  "type": "line-graph",
+  "height": "400",
+  "width": "900",
+  "color": "#e67e22",
+  "query": "SELECT count(*) as count, date_trunc('hour', timestamp) as time FROM network_alerts WHERE timestamp > now() - interval '1 day' GROUP BY time ORDER BY time ASC"
+}

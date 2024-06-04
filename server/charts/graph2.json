@@ -1,0 +1,9 @@
+{
+    "name": "Category Graph",
+    "type": "bar-graph",
+    "height": "300",
+    "width": "400",
+    "color": "#8884d8",
+    "query": "SELECT count(*) as count, date_trunc('hour', timestamp) as time FROM network_alerts WHERE timestamp > now() - interval '1 day' GROUP BY time ORDER BY time ASC"
+  }
+  
